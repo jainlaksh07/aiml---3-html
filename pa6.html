@@ -1,0 +1,108 @@
+
+<body style="background-color: #f8f413;">
+
+    <div style="
+        width: 600px;
+        margin: 50px auto;
+        padding: 25px;
+        border: 2px solid rgb(196, 97, 97);
+        border-radius: 10px;
+        background-color: #ed7fd3;
+        box-shadow: 0 0 10px rgb(12, 13, 13);
+    ">
+
+        <h1 align="center">STUDENT REGISTRATION PORTAL</h1>
+
+        <form align="center" action="submit.html" method="POST">
+
+            <div>
+                <label for="FULL_NAME">FULL NAME</label>
+                <input type="text" id="FULL_NAME" name="FULL_NAME"
+                       placeholder="Enter your name">
+            </div>
+
+            <br>
+
+            <div>
+                <label for="EMAIL">EMAIL</label>
+                <input type="email" id="EMAIL" name="EMAIL"
+                       placeholder="Enter your email">
+            </div>
+
+            <br>
+
+            <div>
+                <label for="password">PASSWORD</label>
+                <input type="password" id="password" name="PASSWORD"
+                       placeholder="Enter password">
+
+                <input type="checkbox" id="showPassword"
+                       onclick="togglePassword()">
+                <label for="showPassword">Show Password</label>
+            </div>
+
+            <br>
+
+            <div>
+                <label>GENDER</label>
+                <input type="radio" name="gender" value="male"> MALE
+                <input type="radio" name="gender" value="female"> FEMALE
+                <input type="radio" name="gender" value="OTHERS">OTHERS
+                
+            </div>
+
+            <br>
+
+            <div>
+                <label for="DOB">DATE OF BIRTH :</label>
+                <input type="date" id="DOB" name="DOB">
+            </div>
+
+            <br>
+
+            <div>
+                <label for="address">ADDRESS :</label>
+                <textarea id="address" name="address"
+                          placeholder="Enter your address"
+                          rows="4" cols="50"></textarea>
+            </div>
+
+            <br>
+
+            <div>
+                <label for="phone">PHONE NUMBER :</label>
+                <input type="tel" id="phone" name="phone"
+                       placeholder="Enter your phone number">
+            </div>
+
+            <br>
+
+            <div>
+                <label for="terms">
+                    I agree to the terms and conditions
+                </label>
+                <input type="checkbox" id="terms" name="terms">
+            </div>
+
+            <br>
+
+            <input type="submit" value="Submit">
+
+        </form>
+
+    </div>
+
+    <script>
+        function togglePassword() {
+            var password = document.getElementById("password");
+
+            if (password.type === "password") {
+                password.type = "text";
+            }
+            else {
+                password.type = "password";
+            }
+        }
+    </script>
+
+</body>
